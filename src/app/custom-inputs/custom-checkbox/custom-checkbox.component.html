@@ -1,1 +1,15 @@
-<input type="checkbox" kendoCheckBox />
+<input
+  type="checkbox"
+  id="checkbox"
+  class="checkbox"
+  (change)="onChange($event.target.checked)"
+  [formControl] = "checkboxControl"
+  kendoCheckBox
+/>
+<label
+  for="checkbox"
+  *ngIf="checkboxControl.value"
+>
+  checked
+</label>
+

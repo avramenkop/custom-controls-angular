@@ -1,1 +1,14 @@
-<kendo-switch></kendo-switch>
+<kendo-switch
+  id="switch"
+  class="switch"
+  (valueChange)="onChange($event)"
+  [formControl] = "switchControl"
+  [onLabel]="' '"
+  [offLabel]="' '"
+></kendo-switch>
+<label
+  for="switch"
+  *ngIf="switchControl.value"
+>
+  switched
+</label>

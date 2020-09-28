@@ -1,23 +1,49 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
 
-  <label for="switch">
+  <h2>Inside form</h2>
+  <h3>Value: {{form.get('switch').value}}</h3>
+  <h3>Value: {{form.get('checkbox').value}}</h3>
+
+  <div class="switch">
     <app-custom-switch
       formControlName="switch"
       id="switch"
     ></app-custom-switch>
-    switched
-  </label>
+<!--    <label-->
+<!--      for="switch"-->
+<!--      *ngIf="form.get('switch').value"-->
+<!--    >-->
+<!--      switched-->
+<!--    </label>-->
+  </div>
 
-  <label for="checkbox">
+  <div class="checkbox">
     <app-custom-checkbox
       formControlName="checkbox"
       id="checkbox"
     ></app-custom-checkbox>
-    checked
-  </label>
+<!--    <label-->
+<!--      for="checkbox"-->
+<!--      *ngIf="form.get('checkbox').value"-->
+<!--    >-->
+<!--      checked-->
+<!--    </label>-->
+  </div>
 
   <button type="submit">Submit</button>
 
 </form>
+
+
+
+<div class="outside">
+  <h2>Outside form</h2>
+  <div class="switch">
+    <app-custom-switch></app-custom-switch>
+  </div>
+  <div class="checkbox">
+    <app-custom-checkbox></app-custom-checkbox>
+  </div>
+</div>
 
 
