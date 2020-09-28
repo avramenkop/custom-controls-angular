@@ -1,4 +1,4 @@
-import {Component, forwardRef, OnInit} from '@angular/core';
+import {Component, forwardRef, OnInit, ViewEncapsulation} from '@angular/core';
 import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
@@ -9,7 +9,8 @@ import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/for
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => CustomCheckboxComponent),
     multi: true
-  }]
+  }],
+  encapsulation: ViewEncapsulation.None
 })
 export class CustomCheckboxComponent implements OnInit, ControlValueAccessor {
 

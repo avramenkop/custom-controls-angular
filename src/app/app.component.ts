@@ -8,18 +8,22 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class AppComponent{
   form: FormGroup;
+  isValid = true
   switch
 
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
-      switch: [false, Validators.required],
-      checkbox: [false, Validators.required],
+      switch: [false, [Validators.required, Validators.requiredTrue]],
+      checkbox: [false, [Validators.required, Validators.requiredTrue]],
     })
   }
 
   submit() {
-    console.log(this.form.value)
+    if (this.form.valid) {
+      this.isValid = true
+      console.log(this.form.value)
+    } else {
+      this.isValid = false
+    }
   }
-
-
 }

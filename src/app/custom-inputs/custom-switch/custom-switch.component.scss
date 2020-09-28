@@ -1,9 +1,57 @@
-.switch {
-  border: 2px solid #171779;
+//normal
+.k-switch-container {
+  border: 2px solid #1c1c82;
 }
 
-.k-switch-container .k-switch-off .k-switch-handle {
-  border-color: #171779 !important;
-  background-color: #171779 !important;
+.k-switch-on .k-switch-container {
+  border: 2px solid #1c1c82 !important;
 }
 
+.k-switch-off .k-switch-handle {
+  border: 2px solid #1c1c82;
+  background: #fff;
+}
+
+.k-switch-on .k-switch-handle {
+  background: #fff;
+}
+
+.k-switch-on .k-switch-container {
+  background: #1c1c82;
+}
+
+.k-switch-container:hover, .k-switch-container:hover .k-switch-handle {
+  border: 2px solid #72b0e5 !important;
+  background: #fff !important;
+}
+
+
+//focus
+.k-switch-container:focus {
+  border: 2px solid #72b0e5
+}
+
+.k-switch-off .k-switch-handle:focus {
+  border: 2px solid #72b0e5 !important;
+}
+
+.k-switch-on .k-switch-container:focus {
+  background: #72b0e5 !important;
+}
+
+.k-switch-container:focus, .k-switch-container:focus .k-switch-handle {
+  border: 2px solid #72b0e5 !important;
+}
+
+
+.error .k-switch-on .k-switch-container {
+  border: 2px solid #ec0f17;
+}
+
+.error .k-switch-off .k-switch-container {
+  border: 2px solid #ec0f17;
+}
+
+.error .k-switch-off .k-switch-handle {
+  border: 2px solid #ec0f17;
+}

@@ -8,26 +8,16 @@
     <app-custom-switch
       formControlName="switch"
       id="switch"
+      [class.error]="!isValid"
     ></app-custom-switch>
-<!--    <label-->
-<!--      for="switch"-->
-<!--      *ngIf="form.get('switch').value"-->
-<!--    >-->
-<!--      switched-->
-<!--    </label>-->
   </div>
 
   <div class="checkbox">
     <app-custom-checkbox
       formControlName="checkbox"
       id="checkbox"
+      [class.error]="!isValid"
     ></app-custom-checkbox>
-<!--    <label-->
-<!--      for="checkbox"-->
-<!--      *ngIf="form.get('checkbox').value"-->
-<!--    >-->
-<!--      checked-->
-<!--    </label>-->
   </div>
 
   <button type="submit">Submit</button>
